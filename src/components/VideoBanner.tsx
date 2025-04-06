@@ -17,8 +17,8 @@ const VideoBanner = () => {
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
         <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Our Site</h1>
-          <p className="text-xl">Discover amazing products and services</p>
+          <h1 className="text-5xl font-bold mb-4">Premios facil YA</h1>
+          <p className="text-xl">Tus Oportunidades crecen con nosotros</p>
         </div>
       </div>
     </div>
