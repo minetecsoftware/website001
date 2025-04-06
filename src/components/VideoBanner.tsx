@@ -11,7 +11,7 @@ const VideoBanner = () => {
         playsInline
       >
         <source 
-          src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" 
+          src="https://premiosfacilya.com/web//assets/video/premiosya00002.mp4" 
           type="video/mp4" 
         />
       </video>
