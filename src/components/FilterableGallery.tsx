@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 const categories = ['all', 'smartphones', 'motos', 'laptops', 'viajes'];
 
 const images = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800', category: 'smartphones' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800', category: 'motos' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=800', category: 'laptops' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800', category: 'viajes' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=800', category: 'smartphones' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1622185135505-2d795003994a?q=80&w=800', category: 'motos' },
+  { id: 1, src: '/public/images/premio-celular.webp', category: 'smartphones' },
+  { id: 2, src: '/public/images/premio-moto.webp', category: 'motos' },
+  { id: 3, src: '/public/images/premio-laptop.webp', category: 'laptops' },
+  { id: 4, src: '/public/images/premio-viajes.webp', category: 'viajes' },
+  { id: 5, src: '/public/images/premio-celular2.webp', category: 'smartphones' },
+  { id: 6, src: '/public/images/premio-moto2.webp', category: 'motos' },
 ];
 
 const Modal = ({ images, currentIndex, onClose }: { images: any[]; currentIndex: number; onClose: () => void }) => {
