@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
 const images = [
-  'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=800',
-  'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=800',
-  'https://images.unsplash.com/photo-1682687220199-d0124f48f95b?q=80&w=800',
-  'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=800',
-  'https://images.unsplash.com/photo-1682687220199-d0124f48f95b?q=80&w=800',
+  '/public/images/premiacion-01.webp',
+  '/public/images/premiacion-02.webp',
+  '/public/images/premiacion-03.webp',
+  '/public/images/premiacion-04.webp',
+  '/public/images/premiacion-05.webp',
 ];
 
 const HorizontalCarousel = () => {
@@ -29,18 +29,22 @@ const HorizontalCarousel = () => {
   }, []);
 
   return (
-    <div
-      ref={scrollRef}
-      className="flex overflow-x-hidden space-x-4 py-4"
-    >
-      {images.concat(images).map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Carousel ${index + 1}`}
-          className="w-64 h-40 object-cover rounded-lg flex-shrink-0"
-        />
-      ))}
+    <div> 
+       <span style={{ color: 'black', fontWeight: 'bold', fontSize: '24px' }}>GANADORES RECIENTES</span> 
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-hidden space-x-4 py-4"
+
+      >
+        {images.concat(images).map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Carousel ${index + 1}`}
+            className="w-90 h-64 object-cover object-top rounded-lg flex-shrink-0"
+          />
+        ))}
+      </div>
     </div>
   );
 };

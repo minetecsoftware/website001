@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const categories = ['all', 'smartphones', 'motos', 'laptops', 'viajes'];
+const categories = ['Premios Destacados', 'smartphones', 'motos', 'laptops', 'viajes'];
 
 const images = [
   { id: 1, src: '/public/images/premio-celular.webp', category: 'smartphones' },
   { id: 2, src: '/public/images/premio-moto.webp', category: 'motos' },
-  { id: 3, src: '/public/images/premio-laptop.webp', category: 'laptops' },
+  { id: 3, src: '/public/images/premio-laptop2.webp', category: 'laptops' },
   { id: 4, src: '/public/images/premio-viajes.webp', category: 'viajes' },
-  { id: 5, src: '/public/images/premio-celular2.webp', category: 'smartphones' },
+  { id: 5, src: '/public/images/premio-laptop.webp', category: 'laptops' },
   { id: 6, src: '/public/images/premio-moto2.webp', category: 'motos' },
 ];
 
@@ -35,7 +35,7 @@ const Modal = ({ images, currentIndex, onClose }: { images: any[]; currentIndex:
           </div>
         </div>
         <button onClick={onClose} className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg">
-          Close
+          Cerrar
         </button>
       </div>
     </div>
@@ -43,11 +43,11 @@ const Modal = ({ images, currentIndex, onClose }: { images: any[]; currentIndex:
 };
 
 const FilterableGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('Premios Destacados');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const filteredImages = images.filter(
-    (image) => selectedCategory === 'all' || image.category === selectedCategory
+    (image) => selectedCategory === 'Premios Destacados' || image.category === selectedCategory
   );
 
   return (

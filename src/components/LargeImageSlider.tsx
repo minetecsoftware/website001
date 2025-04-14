@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=1600',
-  'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=1600',
-  'https://images.unsplash.com/photo-1682687220199-d0124f48f95b?q=80&w=1600',
+  '/public/images/cf-premio01.webp',
+  '/public/images/cf-premio02.webp',
+  '/public/images/cf-premio03.webp',
+  '/public/images/cf-premio04.webp',
 ];
 
 const LargeImageSlider = () => {
@@ -23,7 +24,7 @@ const LargeImageSlider = () => {
         <img
           src={images[currentIndex]}
           alt={`Large Slide ${currentIndex + 1}`}
-          className="w-full h-[600px] object-cover"
+          className="w-full h-[720px] object-cover"
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { PlusCircle, MinusCircle } from 'lucide-react';
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-lg font-medium">{question}</span>
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+        {isOpen ? <MinusCircle /> : <PlusCircle />}
       </button>
       {isOpen && <p className="mt-4 text-gray-600">{answer}</p>}
     </div>
@@ -21,23 +21,20 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 const FAQ = () => {
   return (
     <div className="max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Preguntas Frecuentes</h2>
       <FAQItem
-        question="What services do you offer?"
+        question="¿Cómo participo?"
         answer="We offer a wide range of services including web development, mobile app development, and digital marketing solutions."
       />
       <FAQItem
-        question="How can I contact support?"
+        question="¿Cómo se eligen los ganadores?"
         answer="You can reach our support team through email at support@example.com or by calling our 24/7 helpline."
       />
       <FAQItem
-        question="What are your business hours?"
+        question="¿Es seguro participar en Premios Fácil YA "
         answer="We are open Monday through Friday from 9 AM to 6 PM EST. Weekend support is available for premium customers."
       />
-      <FAQItem
-        question="Do you offer refunds?"
-        answer="Yes, we offer a 30-day money-back guarantee on all our services. Terms and conditions apply."
-      />
+
     </div>
   );
 };

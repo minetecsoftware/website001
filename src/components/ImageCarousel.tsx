@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=1200',
-  'https://images.unsplash.com/photo-1605170439002-90845e8c0137?q=80&w=1200',
-  'https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=1200',
-  'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?q=80&w=1200',
+  '/public/images/cf-premio01.webp',
+  '/public/images/cf-premio02.webp',
+  '/public/images/cf-premio03.webp',
+  '/public/images/cf-premio04.webp',
 ];
 
 const ImageCarousel = () => {
