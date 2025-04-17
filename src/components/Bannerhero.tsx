@@ -70,12 +70,52 @@ const BannerHero = () => {
 
   return (
 
-    <body>
-      <div className="w-full bg-gray-200 py-4 text-center">
-        Este div ocupa el 100% del ancho del body.
+
+<div className=" w-full">
+      <div className="w-full h-screen relative mt-16">
+        <img
+          src={images[currentImageIndex]}
+          alt="Banner Hero"
+          className="w-full h-full"
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
+          <h1 className="text-white text-5xl font-bold  mb-4" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+            Gana Premios Fáciles y Rápido
+          </h1>
+          <p
+            ref={subtitleRef}
+            className={`text-white text-3xl  mb-8 transition-opacity duration-500 ease-in-out`}
+            style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
+          >
+            {subtitle}
+          </p>
+          <a
+            href="sitio.com/participa/"
+            className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-md"
+          >
+            ¡Participar Ahora!
+          </a>
+        </div>
       </div>
-      {/* ... otro contenido del body ... */}
-    </body>
+      <div className="bg-gray-700 text-white py-8 text-center">
+        <p className="mb-4 text-2xl" >¡No te lo pierdas! Próximo Sorteo:</p>
+        <div className="flex justify-center space-x-8">
+          <div>
+            <span className="font-bold text-4xl">{countdown.days}</span>
+            <span className="text-lg"> días</span>
+          </div>
+          <div>
+            <span className="font-bold text-4xl">{countdown.hours}</span>
+            <span className="text-lg"> horas</span>
+          </div>
+          <div>
+            <span className="font-bold text-4xl">{countdown.minutes}</span>
+            <span className="text-lg"> minutos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
   );
