@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { PlusCircle, MinusCircle } from 'lucide-react';
 
+
+
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200 py-4">
+    <div
+      className={`border-b border-gray-200 py-4 px-4 rounded-md transition-all duration-300 ${
+        isOpen ? 'bg-gray-100 text-black' : 'bg-white text-black'
+      }`}
+    >
       <button
         className="flex justify-between items-center w-full text-left"
         onClick={() => setIsOpen(!isOpen)}
@@ -13,7 +19,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
         <span className="text-lg font-medium">{question}</span>
         {isOpen ? <MinusCircle /> : <PlusCircle />}
       </button>
-      {isOpen && <p className="mt-4 text-gray-600">{answer}</p>}
+      {isOpen && <p className="mt-4">{answer}</p>}
     </div>
   );
 };

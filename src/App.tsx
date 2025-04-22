@@ -19,16 +19,11 @@ function App() {
     <div className="min-h-screen bg-white">
        <Header />
 
-      <section className="container mx-auto px-4 py-12">
-        <Bannerhero />
-      </section>
-
-      
-
+       <VideoBanner />
 
 
       <section className="container mx-auto px-4 py-12">
-        <LargeImageSlider />
+         <LargeImageSlider />
       </section>
 
       <section className="container mx-auto px-4 py-12">

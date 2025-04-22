@@ -15,34 +15,34 @@ const Footer = () => {
           <div>
             <h3 className="text-3xl font-bold mb-4">Menú del Sitio</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-green-600">Inicio</a></li>
-              <li><a href="#" className="hover:text-green-600">Sorteos</a></li>
-              <li><a href="#" className="hover:text-green-600">Ganandores</a></li>
-              <li><a href="#" className="hover:text-green-600">Preguntas Frecuentes</a></li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300"><a href="#">Inicio</a></li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300"><a href="#">Sorteos</a></li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300"><a href="#">Ganadores</a></li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300"><a href="#">Preguntas Frecuentes</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-3xl font-bold mb-4">Contáctanos</h3>
             <ul className="space-y-2">
-              <li>Correo: info@premiosfacilya.pe</li>
-              <li>Teléfono: (+51) 123-4567</li>
-              <li>Dirección: Calle 123, Lima, Perú</li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300">Correo: info@premiosfacilya.pe</li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300">Teléfono: (+51) 123-4567</li>
+              <li className="hover:transform hover:translate-x-2 transition-transform duration-300">Dirección: Calle 123, Lima, Perú</li>
             </ul>
           </div>
           <div>
             <h3 className="text-3xl font-bold mb-4">Síguenos</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-green-600">
+              <a href="#" className="hover:text-green-600 transform transition-transform duration-300 hover:scale-150">
                 <Facebook size={32} /> {/* Icono de Facebook */}
               </a>
-              <a href="#" className="hover:text-green-600">
+              <a href="#" className="hover:text-green-600 transform transition-transform duration-300 hover:scale-150">
                 <Twitter size={32} /> {/* Icono de Twitter */}
               </a>
-              <a href="#" className="hover:text-green-600">
+              <a href="#" className="hover:text-green-600 transform transition-transform duration-300 hover:scale-150">
                 <Instagram size={32} /> {/* Icono de Instagram */}
               </a>
             </div>
-          </div>
+          </div>        
         </div>
         <div className="mt-8 pt-8 border-t border-green-200 text-center">
           <p>&copy; {currentYear} Premios Facil YA. Todos los derechos Reserveados.</p>

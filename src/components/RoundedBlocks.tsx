@@ -5,9 +5,9 @@ const Block = ({ title, content, profileImage }: { title: string; content: strin
 
   return (
     <div
-      className={`p-6 rounded-lg transition-all duration-300 ${
-        isHovered ? 'border-green-300' : 'border-black'
-      } border-2 flex flex-col items-center`}
+      className={`p-6 rounded-lg transition-all duration-300 transform ${
+        isHovered ? 'translate-y-[-15px] border-green-200' : 'translate-y-0 border-black'
+      } border-0 flex flex-col items-center shadow-[4px_4px_10px_rgba(0,0,0,1.15)]`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -19,11 +19,14 @@ const Block = ({ title, content, profileImage }: { title: string; content: strin
         />
       </div>
       <div className="mb-2">
-        <span style={{ color: 'gold', fontSize: '1.2em', marginRight: '2px' }}>★</span>
-        <span style={{ color: 'gold', fontSize: '1.2em', marginRight: '2px' }}>★</span>
-        <span style={{ color: 'gold', fontSize: '1.2em', marginRight: '2px' }}>★</span>
-        <span style={{ color: 'gold', fontSize: '1.2em', marginRight: '2px' }}>★</span>
-        <span style={{ color: 'gold', fontSize: '1.2em' }}>★</span>
+        {[...Array(5)].map((_, i) => (
+          <span
+            key={i}
+            style={{ color: 'gold', fontSize: '1.2em', marginRight: i < 4 ? '2px' : 0 }}
+          >
+            ★
+          </span>
+        ))}
       </div>
       <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
       <p className="text-center">{content}</p>
@@ -63,7 +66,7 @@ const RoundedBlocks = () => {
       <div className="mt-8 flex justify-center">
         <button
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleVerMasClick} // Agregamos el manejador onClick
+          onClick={handleVerMasClick}
         >
           Ver más ganadores
         </button>
