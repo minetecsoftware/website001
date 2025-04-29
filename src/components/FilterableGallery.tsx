@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
+// Cambiamos directamente el label a un objeto con varias líneas
 const categories = ['Premios Destacados', 'smartphones', 'motos', 'autos', 'laptops', 'viajes'];
 
 const images = [
-  { id: 1, src: '/public/images/premio-iphone.webp', category: 'smartphones', label: 'Movil Iphone' },
+  { id: 1, src: '/public/images/premio-iphone.webp', category: 'smartphones', label: 'iphone' },
   { id: 2, src: '/public/images/premio-moto.webp', category: 'motos', label: 'Motos Urbanas' },
   { id: 3, src: '/public/images/premio-laptop2.webp', category: 'laptops', label: 'Laptops Gamer' },
   { id: 4, src: '/public/images/premio-travel.webp', category: 'viajes', label: 'Viajes' },
@@ -75,8 +76,16 @@ const FilterableGallery = () => {
             className="relative cursor-pointer rounded-lg overflow-hidden hover:border-4 hover:border-green-300 transition-all duration-300"
           >
             <img src={image.src} alt="" className="w-full h-96 object-cover" />
-            <div className="absolute bottom-0 w-full bg-white bg-opacity-80 h-16 flex items-center justify-center">
-              <span className="text-black text-[1.5rem] font-semibold">{image.label}</span>
+            <div className="absolute bottom-0 w-full bg-white bg-opacity-90 py-4 flex flex-col items-center justify-center">
+              {image.label === 'iphone' ? (
+                <>
+                  <span className="text-black text-lg font-bold font-luckiest">PAQUETE DE SORTEO</span>
+                  <span className="text-black text-md font-semibold font-luckiest">iPhone, Gran Sorteo 17 de Abril (Creado por "Mauricio Islas")</span>
+                  <span className="text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</span>
+                </>
+              ) : (
+                <span className="text-black text-[1.5rem] font-semibold">{image.label}</span>
+              )}
             </div>
           </div>
         ))}

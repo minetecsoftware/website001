@@ -26,8 +26,8 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
 const FAQ = () => {
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Preguntas Frecuentes</h2>
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-8">Preguntas Frecuentes</h2>
       <FAQItem
         question="¿Cómo participo?"
         answer="We offer a wide range of services including web development, mobile app development, and digital marketing solutions."
